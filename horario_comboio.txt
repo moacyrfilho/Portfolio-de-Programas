@@ -1,0 +1,42 @@
+
+
+// Elabore uma aplicação de apoio à CP que permita indicar a hora de chegada
+// de um determinado comboio (horas e minutos), conhecida a hora de partida 
+// (horas e minutos) e a duração da viagem (horas e minutos).
+// Deve ainda ser indicado se o comboio chega no próprio dia ou no dia seguinte, 
+//considerando que a duração da viagem nunca é superior a 24 horas. 
+
+DE
+
+linha INTEIRO
+horaPart, horaCheg, duraViag, diaViag DATE
+
+INICIO
+
+ESCREVER ("INFORME O NUMERO DA LINHA QUE DESEJA SABER O HORARIO DE CHEGADA:");
+LER (linha);
+
+ENQUANTO (linha <= 0) FAZER
+    ESCREVER ("NUMERO DE LINHA ERRADO. INSIRA NOVAMENTE:")
+FIMENQUANTO
+
+ESCREVER ("INFORME O DIA DA VIAGEM:")
+LER (diaViag);
+ESCREVER ("INFORME A HORA DA PARTIDA DA LINHA " , linha, " :");
+LER (horaPart);
+
+ESCREVER ("INFORME A DURAÇAO DA VIAGEM DA LINHA " , linha, " :");
+LER (duraViag);
+
+horaCheg = horaPart + duraViag;
+
+SE ( horaCheg < horaPart) ENTAO
+    ESCREVER ("A LINHA NUMERO: ", linha, "CHEGARA AS: " , horaCheg, "DO DIA: " , diaViag+1);
+SENAO
+    ESCREVER ("A LINHA NUMERO: ", linha, "CHEGARA AS: " , horaCheg, "DO DIA: " , diaViag);
+FIMSE
+
+FIM
+
+
+

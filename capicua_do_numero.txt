@@ -1,0 +1,27 @@
+
+
+// a) Analise o seguinte algoritmo e diga qual o seu objetivo 
+// b) Altere o algoritmo de modo que só aceite como entrada um
+//  número par e não múltiplo de 3. 
+
+DE
+
+num, num1=0, dig INTEIRO 
+
+INICIO
+    ESCREVER ("INSIRA UM NUMERO PAR E NAO MULTIPLO DE TRES:");
+    LER (num);
+
+    ENQUANTO (num % 2 != 0 || num % 3 == 0) FAZER
+        ESCREVER ("NUMERO INVALIDO. INSIRA UM NUMERO PAR E NAO MULTIPLO DE TRES:");
+        LER (num); // 123
+    FIMENQUANTO
+
+    ENQUANTO (num != 0) FAZER // 123 (V) //12  (V) //1 (V) //0 (F)
+        dig <- num % 10; //123%10=3 //2 //1
+        num1 <- num1 * 10 + dig; // 0*10+3=3 //3*10+2=32 //32*10+1=321
+        num <- num / 10; //123/10=12 //1 //0
+    FIMENQUANTO 
+
+    ESCREVER ("RESULTADO: " , num1); // 321
+FIM

@@ -1,0 +1,48 @@
+
+DE
+
+numero, contador, num_par, num_impar, soma_impar INTEIRO
+
+med_impar, percpar REAL
+
+INICIO
+
+    contador <- 0
+    num_par <- 0
+    num_impar <- 0
+    soma_impar <- 0 
+
+    ESCREVER ("INSIRA UM NUMERO POSITIVO")
+    LER (numero)
+
+        ENQUANTO (numero > 0)
+            contador = contador + 1
+            SE (numero MOD 2 = 0) ENTAO
+                num_par <- num_par + 1
+            SENAO
+                num_impar <- num_impar + 1
+                soma_impar <- soma_impar + numero
+            FIMSE
+        FIMENQUANTO
+
+        SE (contador = 0 ) ENTAO
+            ESCREVER ("NAO FORAM INTRODUZIDOS NUMEROS VALIDOS")
+        
+        SENAO
+            med_impar <- soma_impar / num_impar
+            percpar <- (num_par / contador ) *100
+            ESCREVER
+            ESCREVER
+        FIMSE
+FIM
+
+
+
+
+
+
+
+
+
+
+

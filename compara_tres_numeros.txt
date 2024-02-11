@@ -1,0 +1,49 @@
+
+ficha2_exercicio3a
+
+DE
+
+valor1, valor2, valor3 INTEIRO
+maior_valor, menor_valor, medio_valor INTEIRO
+
+INICIO
+
+ESCREVER ("INSIRA O VALOR 1: ");
+LER (valor1);
+
+ESCREVER ("INSIRA O VALOR 2: ");
+LER (valor2);
+
+ESCREVER ("INSIRA O VALOR 3: ");
+LER (valor3);
+
+SE (valor1 > valor2 E valor1 > valor3) ENTAO
+    valor1 <- maior_valor
+        SE (valor2 > valor3) ENTAO
+            valor2 <- medio_valor
+            valor3 <- menor_valor
+        SENAO 
+            valor3 <- medio_valor
+            valor2 <- menor_valor
+FIMSE
+SE (valor2 > valor1 E valor2 > valor3) ENTAO
+    valor2 <- maior_valor
+        SE (valor1 > valor3) ENTAO
+            valor1 <- medio_valor
+            valor3 <- menor_valor
+        SENAO 
+            valor3 <- medio_valor
+            valor1 <- menor_valor
+FIMSE
+SE (valor3 > valor2 E valor3 > valor1) ENTAO
+    valor3 <- maior_valor
+        SE (valor2 > valor1) ENTAO
+            valor2 <- medio_valor
+            valor1 <- menor_valor
+        SENAO 
+            valor1 <- medio_valor
+            valor2 <- menor_valor
+FIMSE
+FIM
+
+

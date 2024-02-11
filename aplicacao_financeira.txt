@@ -1,0 +1,57 @@
+
+
+//Pretende-se fazer um depósito num banco a uma dada taxa de juro mensal, 
+//com juros capitalizáveis, isto é ao fim de cada mês o montante em depósito 
+//será acrescido do juro respetivo desse mês. Faça um algoritmo para uma 
+//aplicação em que sendo dado o montante inicial e as taxas de juro de cada 
+//mês indique o valor disponível ao fim de um ano
+
+
+DE
+
+txMensal, juros, capital, disponivel REAL
+mes, i INTEIRO
+
+
+
+INICIO
+
+    ESCREVER ("INFORME O VALOR A SER DEPOSITADO: ");
+    LER (capital);
+
+    ENQUANTO (capital <= 0) FAZER 
+        ESCREVER ("VALOR INVALIDO. INFORME O VALOR A SER DEPOSITADO: ");
+        LER (capital);
+    FIMENQUANTO 
+
+    ESCREVER ("INFORME O NUMERO DO MES DO DEPOSITO: ");
+    LER (mes);
+
+    ENQUANTO (mes < 0 | mes > 12) FAZER 
+        ESCREVER ("NUMERO DO MES INVALIDO. INFORME O NUMERO DO MES DE 1 (JAN) A 12 (DEZ): ");
+        LER (mes);
+    FIMENQUANTO 
+
+    ESCREVER ("INFORME A TAXA MENSAL DE JUROS ESCOLHIDA: 1- POUPANÇA (0,5 % aa ou 2- RENDA FIXA- (0,7 % aa): ");
+    LER (txMensal);
+
+    ENQUANTO (txMensal < 0 | txMensal > 2) FAZER 
+        ESCREVER ("TAXA MENSAL INVALIDA. ESCOLHA 1 OU 2:");
+        LER (txMensal);
+    FIMENQUANTO 
+
+    SE (txMensal <- 1) ENTAO 
+        ENQUANTO (mes <= 12-1) FAZER
+            capital <- capital + (capital * juros);
+            mes <- mes + 1;
+        FIMENQUANTO
+    SENAO
+        ENQUANTO (mes <= 12-1) FAZER
+            capital <- capital + (capital * juros);
+            mes <- mes + 1;
+        FIMENQUANTO
+    FIMSE
+
+        ESCREVER ("O VALOR DISPONIVEL EM DEZEMBRO É: " , capital);
+FIM
+

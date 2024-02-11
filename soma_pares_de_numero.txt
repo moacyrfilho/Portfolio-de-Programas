@@ -1,0 +1,42 @@
+
+// a) Construa um algoritmo que calcule a soma dos algarismos pares
+// de um número inteiro positivo introduzido pelo utilizador.
+// Exemplo: • Entrada: 12345 • Saída: 6 (4+2)  
+// b) Altere o algoritmo de modo a ser aplicado
+// a uma sequência de números inteiros terminada por um número não positivo.
+
+
+DE
+
+num, numPar, numImpar, i, numTotal, soma=0  INTEIRO
+
+INICIO
+    ESCREVER ("INFORME QUANTOS NUMEROS SERAO INSERIDOS:");
+    LER (numTotal);
+
+    ENQUANTO (numTotal <= 0) FAZER
+        ESCREVER ("NUMERO INVALIDO. INFORME QUANTOS NUMEROS SERAO INSERIDOS:");
+        LER (numTotal);
+    FIMENQUANTO 
+
+    PARA (i=1 ATE numTotal PASSO1) FAZER
+        ESCREVER ("INSIRA 0 NUMERO " , i , " :");
+        LER (num);
+
+        ENQUANTO (num <= 0) FAZER
+            ESCREVER ("NUMERO INVALIDO. INSIRA UM NUMERO POSITIVO INTEIRO");
+            LER (num);
+        FIMENQUANTO
+
+        ENQUANTO (num > 0) FAZER
+            SE ((num % 10) % 2 = 0) ENTAO 
+                numPar = (num % 10);
+                soma = soma + numPar;
+            SENAO
+                numImpar = (num % 10);
+            FIMSE   
+                num = (num / 10);
+        FIMENQUANTO
+            ESCREVER ("A SOMA DOS ALGARISMOS PARES DO NUMERO " , i , " É: " , soma);
+    FIMPARA   
+FIM

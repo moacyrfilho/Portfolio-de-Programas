@@ -1,0 +1,29 @@
+
+
+DE
+
+dist1, dist2, dist3, dist4, dist5 INTEIRO
+media_diaria REAL
+
+INICIO
+
+ESCREVER ("INSIRA A PRIMEIRA DISTÂNCIA: ")
+LER (dist1)
+
+ESCREVER ("INSIRA A SEGUNDA DISTÂNCIA: ")
+LER (dist2)
+
+ESCREVER ("INSIRA A TERCEIRA DISTÂNCIA: ")
+LER (dist3)
+
+ESCREVER ("INSIRA A QUARTA DISTÂNCIA: ")
+LER (dist4)
+
+ESCREVER ("INSIRA A QUINTA DISTÂNCIA: ")
+LER (dist5)
+
+media_diaria <- dist1 + dist2 + dist3 + dist4 + dist5 / 5
+
+ESCREVER ("A MEDIA DIARIA PERCORRIDA É: " , media_diaria , "KM")
+
+FIM

@@ -1,0 +1,41 @@
+
+
+DE
+
+num1, num2, i, j INTEIRO
+
+INICIO
+
+ESCREVER ("INSIRA UM NUMERO:");
+LER (num1);
+
+ESCRVER ("INSIRA OUTRO NUMERO:");
+LER (num2);
+
+    SE (num1 > num2) ENTAO
+        qtdIntervalo <- num1 - num2 + 1;
+        PARA (i <- 1; i <- qtdIntervalo; PASSO 1)
+        SE (num1 % 3 <- 0 E num1 % 2 <- 0) ENTAO
+            ESCREVER ("NO INTERVALO, O NUMERO " , num1 , "É PAR E MULTIPLO DE 3");
+        FIMSE
+            num1 <- num1 -1;
+    FIMSE
+
+    SE (num1 < num2) ENTAO
+        qtdIntervalo <- num2 - num1+ 1;
+        PARA (j <- 1; j <- qtdIntervalo; PASSO 1)
+        SE (num1 % 3 <- 0 E num1 % 2 <- 0) ENTAO
+            ESCREVER ("NO INTERVALO, O NUMERO " , num1 , "É PAR E MULTIPLO DE 3");
+        FIMSE
+            num1 <- num1 -1;
+    FIMSE
+FIM
+
+
+
+
+
+
+
+
+

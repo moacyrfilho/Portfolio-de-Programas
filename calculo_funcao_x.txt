@@ -1,0 +1,29 @@
+
+
+// Descreva um algoritmo para o cálculo dos valores da seguinte função: 
+// F(x) =  x        se x < 0 
+// F(x) = 0         se x = 0 
+// F(x) = x2-2x     se x > 0 
+
+DE
+
+x, F REAL
+
+INICIO
+
+ESCREVER ("INSIRA O VALOR DE 'X': ");
+LER (x);
+
+SE (x = 0) ENTAO
+    F <- 0
+FIMSE
+
+SE (x < 0) ENTAO
+    F <- X
+SENAO
+    F <- ((x^2)-(2*x));
+FIMSE
+
+FIM
+
+

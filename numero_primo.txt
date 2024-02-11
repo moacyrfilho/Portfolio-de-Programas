@@ -1,0 +1,26 @@
+
+
+// Elabore um algoritmo que dado um número inteiro positivo 
+// verifica se é ou não um número primo. Um número é primo se 
+// for inteiro e se só for divisível por ele próprio e por 1.
+
+DE
+
+num INTEIRO 
+
+INICIO
+    ESCREVER ("INSIRA UM NUMERO INTEIRO POSITIVO: ");
+    LER (num);
+
+    ENQUANTO ( num <= 0) FAZER
+        ESCREVER ("NUMERO INVALIDO. INSIRA UM NUMERO INTEIRO POSITIVO: ");
+        LER (num);
+    FIMENQUANTO 
+    
+    SE (num % 2 != 0 && num % 3 != 0) ENTAO 
+        ESCREVER (" O NUMERO " , num , " É PRIMO. FIM DO PROGRAMA");
+       
+    SENAO
+        ESCREVER ("O NUMERO " , num, " NAO É PRIMO. FIM DOI PROGRAMA.");
+    FIMSE  
+FIM 

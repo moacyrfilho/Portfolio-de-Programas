@@ -1,0 +1,50 @@
+
+
+// Elabore um algoritmo em  pseudocodiho que solicite ao utilizador 
+// a introdução de N números inteiros positivos e que apresente 
+// uma mensagem ao utilizador, informando-o 
+// de quantos desses números introduzidos são números de Harshad. 
+// Faça as validações que considerar necessárias.
+
+DE
+
+qtdNum, num, somaNum=0, contador, i INTEIRO
+        
+
+INICIO
+
+    ESCREVER("Digite a quantidade de números a serem introduzidos: ");
+    LER(qtdNum);
+
+    ENQUANTO (N <= 0) FAZER
+        ESCREVER ("NUMERO INVALIDO. INSIRA NUMERO INTEIRO POSITIVO");
+        LER(qtdNum);
+    FIMENQUANTO
+
+    PARA (i <- 1; ATE qtdNum PASSO 1) FAZER
+        ESCREVER ("INTRODUZA O NUMERO " , i , ":");
+        LER (num);
+
+        ENQUANTO (num <= 0) FAZER
+            ESCREVER ("NUMERO INVALIDO. INSIRA NUMERO INTEIRO POSITIVO");
+            LER(num);
+        FIMENQUANTO
+
+         somaNum = 0;
+         temp=num;
+
+        ENQUANTO (temp > 0) FAZER
+            somaNum = somaNum + temp % 10
+            temp = temp / 10;
+        FIMENQUANTO
+
+            ESCREVER ("A SOMA DOS ALGARISMOS DO NUMERO É: " , somaNum );
+
+        SE (num % somaNum = 0)
+            contador = contador + 1
+        FIMSE
+    FIMPARA
+ 
+ Escrever("DOS ", qtdNum, " NUMEROS INTRODUZIDOS ", contador , " SAO NUMEROS HARSHAD.");
+
+FIM

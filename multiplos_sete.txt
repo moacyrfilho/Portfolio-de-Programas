@@ -1,0 +1,35 @@
+
+
+//Elabore um algoritmo que peça ao utilizador um valor par, com quatro 
+//dígitos e apresente todos os inteiros múltiplos de 7, entre 0 e esse valor. O 
+//pedido do valor deve manter-se enquanto o utilizador introduzir um valor 
+//nas condições pretendidas.
+
+DE
+ i, num, numMultiplos=0 INTEIRO
+
+INICIO
+
+    ESCREVER ("INSIRA UM NUMERO PAR COM 4 DÍGITOS:");
+    LER(num);
+
+    ENQUANTO (num % 2 != 0 || num < 1000 || num > 9999) FAZER 
+        ESCREVER ("NUMERO INVALIDO. INSIRA UM NUMERO PAR E COM 4 DIGITOS:");
+        LER (num);
+    FIMENQUANTO 
+
+    SE (num % 7 == 0) ENTAO 
+        ESCREVER ("O NUMERO " , num, " É MULTIPLO DE 7.");    
+
+        numMultiplos = num / 7;
+
+        ESCREVER ("EXISTEM " , numMultiplos, " MULTIPLOS DE 7, ENTRE 7 E ", num);
+        
+        PARA (i=1 ATE i=numMultiplos PASSO 1) FAZER
+            ESCREVER ("O MULTIPLO " , i, " ENTRE 7 E " , num, " É: " , i * 7);
+
+    SENAO
+        ESCREVER ("O NUMERO " , num , " NAO É MULTIPLO DE SETE. FIM DO PROGRAMA.");
+    FIMSE
+FIM
+

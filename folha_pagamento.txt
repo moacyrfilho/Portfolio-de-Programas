@@ -1,0 +1,66 @@
+
+
+// Uma pequena empresa nacional vai começar a processar os salários para o corrente mês. 
+// Os seus funcionários fizeram horas extraordinárias no mês anterior, as quais serão pagas 
+// juntamente com o salário base. O preço de cada hora extraordinária é de 2% do salário base. 
+// Construa um algoritmo que ajude a contabilidade nesta tarefa. O referido algoritmo deve: 
+// • Ler o número de horas extraordinárias e o salário base de cada funcionário
+// • Calcular e mostrar o salário mensal que cada empregado irá receber
+ (salário base + valor referente às horas extraordinárias)
+// • Calcular e mostrar a média dos salários mensais pagos pela empresa, 
+// no mês corrente. Nota: Termine a leitura dos dados introduzindo o valor -1 nas horas extraordinárias. 
+
+DE 
+
+salBase, salMes, horaExtra, numHextra, medSal, somaSal REAL
+salMin = 760, numEmpreg, i INTEIRO
+
+
+INICIO
+
+    ESCREVER ("INFORME O NUMERO DE EMPREGADOS:");
+    LER (numEmpreg);
+
+    ENQUANTO (numEmpreg <= 0) FAZER
+        ESCREVER ("QUANTIDADE ERRADA. INSIRA UM NUMERO INTEIRO POSITIVO:");
+        LER (numEmpreg);
+    FIMENQUANTO
+
+        somaSal = 0;
+
+    PARA (i=1 ATE numEmpreg PASSO 1);
+
+        ESCREVER ("INSIRA O SALARIO DO EMPREGADO " , i , " :");
+        LER (salBase);
+
+        ENQUANTO (salBase < salMin) FAZER
+            ESCREVER ("SALARIO É MENOR QUE O MINIMO PARA A FUNÇAO. INSIRA O VALOR CORRETO DO SALARIO.");
+            LER (salBase);
+        FIMENQUANTO
+
+        ESCREVER ("INSIRA A QUANTIDADE DE HORAS EXTRAS FEITAS PELO EMPREGADO " , i , " :");
+        LER (horaExtra);
+
+        SE (horaExtra != -1) ENTAO 
+            salMes <- salBase + (((salBase/200)*2/100)*numHextra);
+            ESCREVER ("O SALARIO DO EMPREGADO " , i , " NESTE MES, SERA DE: " , salMes);
+            somaSal <- somaSal + salMes; 
+        SENAO
+            ESCREVER ("PROGRAMA ENCERRADO");
+            somaSal <- somaSal + salBase;
+        FIMSE
+
+    FIMPARA
+
+    medSal <- somaSal / numEmpreg;
+
+    ESCREVER ("A MEDIA DOS SALARIOS PAGOS NESTE MES É: " , medSal);
+FIM
+
+
+
+
+
+
+
+

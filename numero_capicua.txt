@@ -1,0 +1,30 @@
+
+
+// Elabore um algoritmo que leia um número inteiro
+// positivo e verifique se é ou não capicua
+// (= mesmo valor esq/dir e dir/esq)
+
+DE
+
+num, dig, num1=0 INTEIRO
+
+INCIO
+    ESCREVER ("INSIRA UM NUMERO INTEIRO POSITIVO:");
+    LER (num);
+
+    ENQUANTO (num <= 0) FAZER
+        ESCREVER ("NUMERO INVALIDO. INSIRA UM NUMERO INTEIRO POSITIVO");
+        LER (num);
+    FIMENQUANTO
+
+    ENQUANTO (num !=0) FAZER
+        dig <- num % 10;
+        num1 = num1 * 10 + dig;
+        num = num / 10;
+    FIMENQUANTO 
+            
+        ESCREVER ("O NUMERO " + num + " É capicua.");
+FIM  
+
+
+

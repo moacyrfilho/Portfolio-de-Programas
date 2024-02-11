@@ -1,0 +1,75 @@
+
+//Leia a altura de duas crianças e o número de centímetros que crescem por 
+//ano. Pretende-se saber se a criança mais baixa pode alcançar a mais alta e 
+//nesse caso em quantos anos isso acontece, visualizando a evolução das 
+//alturas ano a ano.
+
+
+DE 
+
+alt1, alt2, cresc1, crsc2 REAL
+difAlt, difCresc REAL
+temp INTEIRO
+
+INICIO
+    ESCREVER("INSIRA A ALTURA DA PRIMEIRA CRIANCA: ");
+    LER (alt1);
+
+    ENQUANTO (alt1 <= 0) FAZER
+        ESCREVER ("ALTURA INVALIDA. INSERIR A ALTURA DA CRIANCA);
+        LER (alt1);
+    FIMENQUANTO
+
+    ESCREVER ("INSIRA A ALTURA DA SEGUNDA CRIANCA: ");
+    LER (alt2);
+
+     ENQUANTO (alt2 <= 0) FAZER
+        ESCREVER ("ALTURA INVALIDA. INSERIR A ALTURA DA CRIANCA);
+        LER (alt1);
+    FIMENQUANTO
+
+    SE (alt1 = alt2) ENTAO
+        ESCREVER ("AS CRIANÇAS JA POSSUEM A MESMA ALTURA. FIM DO PROGRAMA");
+        SENAO
+            ESCREVER ("INSIRA A TAXA CRESCIMENTO DA PRIMEIRA CRIANCA: ");
+            LER (cresc1);
+
+            ENQUANTO (alt1 < 0) FAZER
+                ESCREVER ("TAXA INVALIDA. INSERIR A TAXA DA CRIANCA);
+                LER (alt1);
+            FIMENQUANTO
+
+            ESCREVER ("INSIRA A TAXA CRESCIMENTO DA SEGUNDA CRIANÇA: ");
+            LER (cresc2);
+
+            ENQUANTO (alt2 < 0) FAZER
+                ESCREVER ("TAXA INVALIDA. INSERIR A TAXA DA CRIANCA);
+                LER (alt1);
+            FIMENQUANTO
+
+            SE (alt1 > alt2) ENTAO
+                SE (cresc1 > cresc2) ENTAO 
+                    ESCREVER ("A CRIANCA MENOR NUNCA ALCANÇARA A MAIOR");
+                SENAO
+                    difAlt = alt1 - alt2;
+                    difCresc = cresc2 - cresc1;
+                    temp = difAlt / difCresc
+                    ESCREVER ("A CRIANCA MENOR ALCANRA A MAIOR EM " , temp, " ANOS.");
+                FIMSE
+            SENAO SE 
+                SE (cresc1 < cresc2) ENTAO
+                    ESCREVER (A CRIANCA MENOR NUNCA ALCANÇARA A MAIOR");
+                SENAO
+                    difAlt = alt2 - alt1;
+                    difCresc = cresc1 - cresc2;
+                    temp = difAlt / difCresc;
+                    ESCREVER (A CRIANCA MENOR ALCANCARA A MAIOR EM " , temp, " ANOS.");
+                FIMSE
+            FIMSE
+        FIMSE 
+    FIMSE
+FIM
+
+
+
+

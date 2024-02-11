@@ -1,0 +1,38 @@
+
+//Desenvolva um algoritmo que leia números positivos
+//até que o produto acumulado destes seja superior
+//a um dado número introduzido pelo utilizador.
+//Antes de terminar, o algoritmo deve apresentar o maior de todos esses números. 
+
+DE
+
+numPos, prodAcum=1, numTotal, numMaior=0 REAL;
+
+INICIO
+
+    ESCREVER ("INSIRA O NUMERO SUPERIOR:");
+    LER (numTotal);
+
+    ENQUANTO (numTotal <= 0) FAZER
+        ESCREVER ("NUMERO INVALIDO. INSIRA UM NUMERO POSITIVO:");
+        LER (numTotal);
+
+    ENQUANTO (prodAcum <= numTotal) FAZER
+
+        ESCREVER ("INSIRA UM NUMERO POSITIVO:");
+        LER (numPos);
+
+        ENQUANTO (numPos <= 0) FAZER
+            ESCREVER ("NUMERO INVALIDO. INSIRA UM NUMERO POSITIVO:");
+            LER ("numPos");
+        FIMENQUANTO
+
+        prodAcum <- prodAcum * numPos;
+
+        SE (numPos > numMaior) ENTAO
+            numMaior <- numPos;
+        FIMSE          
+    FIMENQUANTO
+    
+    ESCREVER ("O MAIOR NUMERO POSITIVO INSERIDO FOI:" , numMaior);
+FIM

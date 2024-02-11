@@ -1,0 +1,40 @@
+
+DE
+
+limite, numero, num_menor, soma INTEIRO
+
+INICIO
+
+    ESCREVER ("INSIRA O NUMERO LIMITE:")
+    LER (limite)
+
+    ENQUANTO (limite <= 0 )
+        ESCREVER ("LIMITE INVALIDO. INSIRA O NUMERO LIMITE:")
+        LER (limite)
+    FIMENQUANTO
+
+    soma <- 0
+    num_menor <- 9999
+
+    ENQUANTO (soma <= limite)
+        ESCREVER ("INSIRA NUMERO POSITIVO:")
+    FIMENQUANTO
+
+        ENQUANTO (numero <= 0 )
+            ESCREVER ("NUMERO INVALIDO. INSIRA NUMERO POSITIVO:")
+        FIMENQUANTO
+
+        soma <- soma + numero
+
+        SE (numero < num_menor) ENTAO 
+            num_menor <- numero
+        FIMSE
+    FIMENQUANTO
+
+    ESCREVER ("A SOMA FOI ULTRAPASSOU O LIMITE")
+
+    ESCREVER ("O MENOR NUMERO INSERIDO FOI: " , num_menor)
+
+FIM
+
+
